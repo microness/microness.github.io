@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Nanum Gothic Coding';
+  src: url('fonts/nanum-gothic-coding.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'UnBatang';
+  src: url('fonts/unbatang.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* 줄 친 종이: 왼쪽 빨간 세로 두 줄 + 32px 간격 하늘색 가로줄 */
+body {
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 64px 32px 128px 96px;
+  background-color: #FDFDFC;
+  background-image:
+    linear-gradient(to right, transparent 63px, #E6A4A4 63px, #E6A4A4 64px, transparent 64px, transparent 67px, #E6A4A4 67px, #E6A4A4 68px, transparent 68px),
+    repeating-linear-gradient(to bottom, transparent 0px, transparent 31px, #C5D8E8 31px, #C5D8E8 32px);
+  color: #222222;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+main { max-width: 560px; }
+p { margin: 0; }
+
+a { color: #2B4C7E; }
+a:visited { color: #5B2A86; }
+a:hover { color: #16325C; }
+
+.date { color: #666666; }
+
+/* 홈 목록 */
+.year { margin: 0 0 32px; color: #666666; }
+.list { margin: 0 0 32px; padding: 0; list-style: none; }
+.list li { display: flex; gap: 16px; }
+.list .date { width: 7ch; flex-shrink: 0; }
+
+/* 개별 시 */
+h1 {
+  margin: 32px 0;
+  font-family: 'UnBatang', serif;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 32px;
+}
+.poem {
+  font-family: 'UnBatang', serif;
+  font-size: 17px;
+  line-height: 32px;
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
+
+/* 휴대폰: 오른쪽 여백과 글자를 조금 줄여 행이 덜 꺾이게 */
+@media (max-width: 480px) {
+  body { padding-right: 16px; padding-left: 84px; }
+  h1, .poem { font-size: 15px; }
+}
